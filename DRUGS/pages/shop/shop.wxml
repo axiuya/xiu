@@ -1,0 +1,41 @@
+<!--pages/shop/shop.wxml-->
+<!-- <text>pages/shop/shop.wxml</text> -->
+<view >
+  <button class="top" bindtap="intoPage">
+  <view>
+  <image src="../image/shop/local.png"></image>
+  </view>
+ 添加收货地址
+  </button>
+</view>
+
+<view class="style">
+
+<view class="title">康德乐大药房</view>
+  <!-- <checkbox-group> -->
+    <view class="goods" wx:for="{{cartList}}">
+      <checkbox checked="{{item.checked}}" bindtap="selectList" data-index="{{index}}" class="cheone"></checkbox>
+      <image src="{{item.src}}"></image>
+      <!-- <navigator url="../images/shop/shop1.jpg"> -->
+      <view class="context">{{item.text}}
+        <view class="price">￥{{item.price}}
+          <view class="btn">
+          <button size="mini" bindtap="cutnum" data-currentnum="{{[item.num,index]}}">-</button>
+          <text>{{item.num}}</text>
+          <button size="mini" bindtap="addnum" data-currentnum="{{[item.num,index]}}" >+</button>
+          </view>
+        </view>
+      </view>
+<!-- </navigator> -->
+</view>
+<!-- </checkbox-group> -->
+</view>
+<view class="page_over" >
+  <!-- <checkbox-group style="width: 150rpx;" > -->
+  <checkbox value="all" bindtap="selectAll" class="one">全选</checkbox>
+  <!-- </checkbox-group> -->
+  <view class="sum">合计：<text>￥{{tatalPrice}}</text>
+  <view class="money">包含运费</view>
+  </view>
+  <view class="go" bindtap="Settlements">结算</view>
+</view>

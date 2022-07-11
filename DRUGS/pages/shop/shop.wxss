@@ -1,0 +1,98 @@
+/* pages/shop/shop.wxss */
+/* 地址 */
+image{
+  width: 60rpx;
+  height:60rpx;
+}
+.top{
+  display: flex;
+  flex-direction: row;
+}
+/* 商品 */
+.style{
+  width: 100%;
+  height: 100%;
+  margin-top: 10rpx;
+  border-radius: 10% 10% 0 0;
+  border: 1rpx solid #f5f4f4;
+  background-color: #e2e2e259;
+}
+.one{
+    width: 100px;
+    padding-left: 16rpx;
+    padding-top: 23rpx;
+}
+.cheone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2px;
+}
+.title{
+  font-size: 35rpx;
+  margin-top: 20rpx;
+  margin-left: 15rpx;
+}
+.goods{
+  display: flex;
+  width: 100vh;
+  margin-top: 30rpx;
+  padding: 10rpx;
+  margin-bottom: 50rpx;
+  border-bottom: #f1f1f1 solid 3rpx;
+  border-top: #f1f1f1 solid 3rpx;
+}
+.goods image{
+  width: 18%;
+  height: 200rpx;
+}
+.goods .context{
+  margin-left: 10rpx;
+  width: 450rpx;
+  height: 220rpx;
+  overflow:hidden;
+}
+.goods .context .price{
+  color: var(--themeColor);
+  font-size: 40rpx;
+  margin-top: 70rpx;
+}
+.goods .context .btn{
+  color: black;
+  position: relative;
+  text-align: center;
+  left: 27%;
+  bottom: 60rpx;
+}
+.goods .context .btn text{
+  position: relative;
+  bottom: 15rpx;
+}
+.page_over{
+  display: flex;
+  position: fixed;
+  bottom: 2rpx;
+  background-color: bisque;
+  width: 100%;
+}
+.page_over .sum{
+  margin-left: 30%;
+  width: 220rpx;
+  font-size: 30rpx;
+  margin-top: 15rpx;
+}
+.page_over .sum .money{
+  color: #666666;
+  margin-left: 70rpx;
+  font-size: 25rpx;
+}
+.page_over .go{
+  /* background-color: var(--themeColor); */
+  text-align: center;
+  padding-top: 20rpx;
+  width:200rpx;
+  height: 80rpx;
+}
+.page_over .sum text{
+  color: red;
+}

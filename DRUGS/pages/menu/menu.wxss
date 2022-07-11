@@ -1,0 +1,100 @@
+/* pages/menu/menu.wxss */
+swiper image {
+  width: 120vw;
+}
+
+swiper {
+  /* height: 500rpx; */
+  /* 1080/720=100vw/height */
+  height: calc(80vw*520/1080);
+}
+
+.swiper {
+  position: relative;
+}
+
+.dots {
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
+}
+
+.dots view {
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  background-color: #ccc;
+  float: left;
+  margin-left: 10rpx;
+}
+.dots view.active{
+  background-color:darksalmon;
+  width: 30rpx;
+}
+
+.menuLeft{
+  width: 24%;
+  height: calc(100vh - calc(100vw*520/1080));
+  border-right: 2rpx solid #ccc;
+  float: left;
+  box-sizing: border-box;
+}
+.menuLeft view{
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  border-bottom: 2rpx solid #ccc;
+  background: #fff;
+  position: relative;
+}
+.menuLeft view.active{
+  background: #efefef;
+}
+.menuLeft view::before{
+  content: "";
+  width: 8rpx;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.menuLeft view.active::before{
+  background:red;
+}
+.menuRight{
+  float: right;
+  width: 76%;
+  height:calc(100vh - calc(100vw*520/1080));
+  box-sizing: border-box;
+}
+.box{
+  padding: 20rpx;
+  background: #ebfeff;
+}
+.box .title{
+  font-weight: bold;
+}
+.context{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1%;
+  background: #fff;
+}
+.small{
+  width:32%;
+  padding-right: 1%;
+  margin-bottom: 20rpx;
+}
+.small image{
+  width: 90%;
+}
+.small view{
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  /* 超出部分用省略号表示 */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

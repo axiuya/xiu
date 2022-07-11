@@ -1,0 +1,17 @@
+<!--pages/service/service.wxml-->
+<!-- <text>pages/service/service.wxml</text> -->
+<!-- 地图 -->
+<!-- longitude:经度 -->
+<!-- latitude:纬度 -->
+<!-- markers:标记点 -->
+<map 
+longitude="{{longitude}}"
+latitude="{{latitude}}"
+markers="{{markers}}"
+></map>
+<view></view>
+
+
+
+
+

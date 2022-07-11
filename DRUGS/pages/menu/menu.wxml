@@ -1,0 +1,58 @@
+<view class="swiper">
+  <swiper autoplay="true" bindchange="swiperchange">
+    <swiper-item wx:for="{{menuBanner}}" wx:key="*this">
+      <image src="{{item}}" mode="widthFix"></image>
+    </swiper-item>
+  </swiper>
+  <view class="dots">
+    <view wx:for="{{menuBanner}}" wx:key="*this" class="{{currentnum==index?'active':''}}"></view>
+  </view>
+</view>
+
+
+<!-- 内容区 -->
+<view class="menu">
+  <!-- 左侧 -->
+  <scroll-view scroll-y="true" class="menuLeft">
+  <!-- active是动态的加上去的 -->
+  <!-- leftActive代表的就是当前项的view组件 -->
+  <!-- 思考：如何改变leftActive -->
+  <!-- 需求：点击哪一个view组件，对应的view组件就加上active样式 -->
+  <!-- 我们已经知道leftActive可以决定由哪一个view组件加上active样式 -->
+  <!-- 所以在触发点击事件的时候，应该改变leftActive的值 -->
+  <!-- 需要把点击的那一项的index传过去 -->
+    <view 
+    wx:for="{{menulist}}" 
+    wx:key="id" 
+    class="{{leftActive==index?'active':''}}"
+    bindtap="changeLeft"
+    data-myIndex="{{index}}"
+    >
+    {{item.title}}
+    </view>
+  </scroll-view>
+
+  <!-- 右侧 -->
+  <!-- 需求：点击左侧的标题，右侧会对应的显示 相当于要选中scroll-view中的某一项-->
+  <!--scroll-into-view： 值应为某子元素id（id不能以数字开头）。设置哪个方向可滚动，则在哪个方向滚动到该元素 -->
+  <!-- scroll-into-view的值和子元素的id要对应 -->
+  <!-- 子元素的id为box0 那么把scroll-into-view = "box0" 就会在y轴方向滚动到id为box0的元素 -->
+
+<!-- scroll-with-animation：动画 -->
+  <scroll-view scroll-y="true" class="menuRight" scroll-into-view="{{rightId}}" scroll-with-animation>
+  <!-- id要唯一，又不能以数字开头 -->
+    <view id="box{{item.id}}" class="box" wx:for="{{menulist}}" wx:key="id">
+      <!-- 标题 -->
+      <view class="title">{{item.title}}</view>
+      <!-- 内容区域 -->
+      <view class="context">
+      <!-- 这里的item指的是 menuList 的每一项-->
+        <view class="small" wx:for="{{item.subArr}}">
+        <!-- 下面的item指的是 subArr 的每一项 -->
+          <image src="{{item.imgSrc}}" mode="widthFix"></image>
+          <view>{{item.imgDesc}}</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

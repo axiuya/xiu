@@ -1,0 +1,27 @@
+/* component/pro/product.wxss */
+/* 新品模块 */
+.product{
+  display: flex;
+  /* 放不下就换线 */
+  flex-wrap: wrap;
+  padding: 20rpx;
+  border-top: 1rpx solid #666;
+  /* 对齐方式 */
+  justify-content: space-between;
+}
+.pro_box{
+  width: 49%;
+  border-radius: 10rpx;
+  box-shadow: 0 0 10rpx #ccc;
+  margin-bottom: 20rpx;
+}
+
+.pro_box image{
+  width: 100%;
+}
+.pro_box view{
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  color: #666;
+}

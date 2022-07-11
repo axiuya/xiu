@@ -1,0 +1,9 @@
+<!--component/pro/product.wxml-->
+<!-- <text>component/pro/product.wxml</text> -->
+<!-- 新品展示模块 -->
+<view class="product">
+  <view class="pro_box" wx:for="{{showArr}}" wx:key="imgTxt">
+    <image src="{{item.imgSrc}}" mode="widthFix"></image>
+    <view class="text">{{item.imgTxt}}</view>
+  </view>
+</view>

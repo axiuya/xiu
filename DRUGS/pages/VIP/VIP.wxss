@@ -1,0 +1,157 @@
+.userinfo {
+  display: relative;
+  flex-direction: column;
+  align-items: center;
+  height: 300rpx;
+}
+.userinfo::after{
+  content: '';
+  width: 120%;
+  height: 250rpx;
+  position: absolute;
+  z-index: -1;
+  left: -10%;
+  top: 0;
+  border-radius: 0 0 50% 50%;
+  background-color: black;
+}
+.bigbox{
+  width: 700rpx;
+  height: 1325rpx;
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  border-radius: 2%;
+  background-color: rgb(250, 243, 238);
+}
+.bigname{
+  height: 240rpx;
+}
+.smallbox{
+  height: 240rpx;
+}
+.smallbox image{
+  position: absolute;
+  width: 120rpx;
+  height: 120rpx;
+  top: 30px;
+  left: 20px;
+  border-radius: 50%;
+}
+.name{
+  width: 500rpx;
+  position: absolute;
+  left: 80px;top: 25px;
+  line-height: 1.6;
+}
+.name .bname{
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.name .sname{
+  color: rgb(156, 156, 155);
+  font-size: 0.8rem;
+}
+.ssname{
+  color: rgb(156, 156, 155);
+  font-size: 1.2rem;
+  position: absolute;
+  right: 10px;
+  top: 40px;
+}
+.bigtext{
+  display: inline-flex;
+  position: absolute;
+  top: 120px;
+  font-size: 1.1rem;
+  left: 45px;
+}
+.bigtext>view{
+  width: 170px;
+  height: 30px;
+  border-radius: 15px;
+  line-height: 30px;
+  text-align: center;
+  background-color: rgb(252, 245, 207);
+}
+.bigtext .one{
+  color: rgb(255, 229, 82);
+}
+.bigbigbox{
+  position: absolute;
+  top: 170px;
+  left: 10px;
+  width: 280px;
+  height: 80px;
+
+}
+.Onebox{
+  display: inline-flex;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  
+}
+
+.Onebox>view{
+  width: 260px;
+  height: 60px;
+  border-radius: 15px;
+  background-color: #fffefe;
+  
+}
+.onebox{
+  line-height: 1.4;
+  padding-left: 20px; 
+  padding-top: 8px;
+}
+.onebox .bname{
+  /* position: absolute;
+  left: 10px;top: 10px; */
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.onebox .sname{
+  /* position: absolute;
+  left: 10px;
+  top: 40px; */
+  color: rgb(156, 156, 155);
+  font-size: 0.8rem;
+}
+
+.onebtn{
+  margin-top: -45px;
+  padding-left: 130px;
+}
+.onebtn .smallbtn{
+  width: 120px;
+  height: 30px;
+  border-radius: 15px;
+  line-height: 30px;
+  text-align: center;
+  background-color: rgb(245, 212, 25);
+}
+.last{
+  width: 320px;
+  height: 80px;
+  margin-top: 500px;
+  margin-left: 60px;
+}
+.last .onc{
+  width: 200px;
+  height: 40px;
+  border-radius: 15px;
+  line-height: 40px;
+  font-size: 1.2rem;
+  text-align: center;
+  background:-webkit-linear-gradient(top,rgb(247, 179, 35),rgb(245, 212, 25),rgb(240, 215, 104));
+  
+}
+.last .back{
+  padding-top: 5px;
+  margin-left: 50px;
+  text-align: center;
+  width: 80px;
+  height: 20px;
+  border-bottom: 1px solid rgb(20, 100, 220);
+  color: rgb(20, 100, 220);
+}

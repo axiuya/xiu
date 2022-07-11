@@ -1,0 +1,49 @@
+<view class="container">
+
+<view class="userinfo">
+  <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+  <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  <image src="../image/touxiang.jpg" class="account-bg">
+  </image>
+</view>
+
+<view class="separate"></view>
+
+<view class="order" catchtap="toOrder">
+  <text class="myorder-text">逢考必过</text>
+  <text class="myorderlook-text">设置</text>
+  <!-- <image class="next-image" src="../../images/person/next.png"></image> -->
+</view>
+<view class="line"></view>
+
+<view class="navs">
+  <view wx:for="{{orderItems}}" wx:key="name">
+    <view class="nav-item" catchtap="toOrder" data-type="{{item.name}}" data-typeid="{{item.typeId}}">
+      <image src="{{item.imageurl}}" class="nav-image" />
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+</view>
+
+<view class="text_yf">我的服务</view>
+<view class="person-list">
+  <view class="list-item" wx:for="{{listItem}}">
+    <image class="item-image" src="{{item.imageurl}}"></image>
+    <text class="item-text te">{{item.text}}</text>
+  </view>
+  <!-- <view class="person-line"></view> -->
+
+</view>
+<view class="separate"></view>
+
+<view class="text_yf">个人中心</view>
+<view class="person-list">
+
+  <view class="list-item" wx:for="{{personItem}}">
+    <image class="item-image" src="{{item.imageurl}}"></image>
+    <text class="item-text">{{item.text}}</text>
+  </view>
+  
+</view>
+<view class="separate"></view>
+</view>

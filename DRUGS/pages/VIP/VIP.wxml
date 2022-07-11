@@ -1,0 +1,41 @@
+<view>
+  <view   class="userinfo">
+    <view class="bigbox" bindtap="goyf">
+      <view class="bigname">
+        <view class="smallbox">
+          <image src="../image/touxiang.jpg"></image>
+          </view>
+        <view class="name">
+          <text class="bname">逢考必过</text>
+          <view></view>
+          <text class="sname">点击填写个人资料</text>
+        </view>
+        <view class="ssname">></view>
+      </view>
+      <view class="bigtext">
+        <text class="one">— </text>
+        <view class="two">开通VIP+尊享权益</view>
+        <text class="one"> —</text>    
+      </view>
+      <view class="bigbigbox">
+      <view class="Onebox" wx:for="{{listarr}}">
+        <view class="onebox"> 
+          <text class="bname">{{item.bigtitle}}</text>
+          <view></view>
+          <text class="sname">{{item.smallitle}}</text>
+          
+          <view class="onebtn">
+            <view class="smallbtn">{{item.righttext}}</view>
+        </view>
+        </view>
+        
+      </view>
+      </view>
+      
+    </view> 
+  </view>
+</view>
+<view class="last">
+  <view class="onc">点击领取权益</view>
+  <view class="back">点击返回</view>
+</view>

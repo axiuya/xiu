@@ -1,0 +1,60 @@
+<!--pages/home/home.wxml-->
+<!-- 轮播图区域 -->
+<view class="banner">
+  <!-- swiper:轮播图 -->
+  <swiper autoplay bindchange="changeImg">
+    <!-- 直接子组件只能是swiper-item 轮播项 -->
+    <swiper-item wx:for="{{bannerUrl}}" wx:key="imgUrl">
+      <image src="{{item.imgUrl}}" mode="widthFix"></image>
+    </swiper-item>
+  </swiper>
+  <!-- 点 -->
+  <view class="dots">
+    <view wx:for="{{bannerUrl}}" wx:key="imgUrl" class="{{currentActive == index?'active':''}}"></view>
+  </view>
+</view>
+<navigator url="../new/new">
+<view class="icon">
+  <view class="pro_sc" wx:for="{{iconArr}}" wx:key="text">
+    <image src="{{item.src}}" mode="widthFix"></image>
+    <view class="test">{{item.text}}</view>
+  </view>
+</view>
+</navigator>
+      <navigator url="../VIP/VIP" class="vip">
+            <image src="../image/icon2/vip.jpg"></image>
+      </navigator>
+<view class="title">
+  <view class="line"></view>
+  <view class="txt">热品推荐</view>
+</view>
+<!-- 滚动块 -->
+<!-- scroll-x:允许横向滚动 -->
+<scroll-view class="scroll" scroll-x>
+  <view class="sc" wx:for="{{storyArr}}">
+    <image src="{{item.src}}"></image>
+    <view class="text">{{item.text}}</view>
+    <view class="price">{{item.price}}</view>
+    <view class="xiaoliang">
+      <text>{{item.xl}}</text>
+      <image src="../image/icon/购物车_shopping.png"></image>
+    </view>
+  </view>
+</scroll-view>
+
+<view class="title">
+  <view class="line"></view>
+  <view class="txt">店家推荐</view>
+</view>
+
+<view class="product">
+  <view class="pro_box" wx:for="{{showArr}}" wx:key="imgTxt">
+    <image src="{{item.imgSrc}}" mode="widthFix"></image>
+    <view class="text">{{item.imgTxt}}</view>
+    <view class="price">{{item.imgPrice}}</view>
+    <view class="imgxl">
+      <text>{{item.imgXl}}</text>
+      <image src="../image/icon/购物车_shopping.png"></image>
+    </view>
+  </view>
+</view>

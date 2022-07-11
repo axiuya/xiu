@@ -1,0 +1,8 @@
+<!-- name:指定模板名称 -->
+<template name="title">
+  <!-- 标题部分 -->
+  <view class="title">
+    <view class="line"></view>
+    <view class="txt">{{titleName}}</view>
+  </view>
+</template>

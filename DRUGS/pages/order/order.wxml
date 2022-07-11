@@ -1,0 +1,31 @@
+<!--pages/order/order.wxml-->
+<!-- <text>pages/order/order.wxml</text> -->
+
+<view class="order">
+  <view class="content_" >
+    <view class="title" wx:for="{{dingdan}}" >
+      <view>{{item.text}}{{item.num}}</view>
+      <text>{{item.strin}}</text>
+    </view>
+    
+    <view class="card" wx:for="{{array}}">
+      <view class="card-img">
+        <image src="{{item.src}}"></image>
+      </view>
+      <view class="card-text">
+        <view class="card-text_">
+        <text>{{item.text}}</text>
+        <view>￥{{item.price}}</view>
+        <text>×{{item.num}}</text>
+        </view>
+        <view class="card-button">
+          <view bindtap="delete_Car">{{item.dele}}</view>
+          <view>{{item.wul}}</view>
+          <view>{{item.zaigou}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view> 
+ 

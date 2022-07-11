@@ -1,0 +1,51 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/service/service",
+    "pages/menu/menu",
+    "pages/shop/shop",
+    "pages/yf/yf",
+    "pages/order/order",
+    "pages/index/index",
+    "pages/VIP/VIP",
+    "pages/new/new",
+    "pages/list/list",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "大药局",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "./pages/image/icon/home1.png",
+        "selectedIconPath": "./pages/image/icon/home2.png"
+      },
+      {
+        "pagePath": "pages/menu/menu",
+        "text": "菜单",
+        "iconPath": "./pages/image/icon/view-list2.png",
+        "selectedIconPath": "./pages/image/icon/view-list1.png"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "购物车",
+        "iconPath": "./pages/image/icon/shopping1.png",
+        "selectedIconPath": "./pages/image/icon/shopping2.png"
+      },
+      {
+        "pagePath": "pages/yf/yf",
+        "text": "个人中心",
+        "iconPath": "./pages/image/icon/avatar2.png",
+        "selectedIconPath": "./pages/image/icon/avatar1.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
