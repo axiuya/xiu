@@ -1,0 +1,328 @@
+/* 通配符选择器。列表、链接下划线清除默认样式 */
+*{
+	padding: 0;
+	margin: 0 ;
+}
+body{
+	background-image: linear-gradient(180deg, #78cbf269, #87d5f270)
+}
+li{
+	list-style: none;	
+}
+a{
+	/* 清除链接的下划线 */
+	text-decoration: none;
+}
+.menu{
+	position: absolute;
+	left: 2%;
+	top: 10px;
+	display: none;
+}
+.container{
+	background-color: #4c83f2b3;
+}
+/* 导航样式 */
+.container .nav{
+	width: 1226px;
+	height: 50px;
+	margin: 0 auto;
+	/* 弹性布局,是左中右三部分在导航栏横向排列且平均分配 */
+	display: flex;
+	justify-content: space-between;
+}
+/* 图片样式 */
+.container .nav .nav_left{
+	width: 130px;
+	height: 50px;
+	/* 父相子绝 */
+	position: relative;
+}
+.container .nav .nav_left img{
+	width: 100%; /* 填充父级.nav_left的整个宽度 */
+	height: 50px;
+	position: absolute;
+	top: 2px; /* 使图片垂直居中 */
+}
+
+/* 中间样式 */
+.container .nav .nav_center{
+	width: 400px;
+	height: 35px;
+	margin-top: 5px;
+	/* 弹性布局 */
+	display: flex;
+	justify-content: space-between;
+}
+.container .nav .nav_center input{
+	height: 40px;
+	width: 350px;
+	border: none; /* 清除边框 */
+	text-indent: 10px;/* 文本缩进 */
+	outline: none;/* 清除默认的聚集效果 */
+}
+.container .nav .nav_center button{
+	width: 49px;
+	height: 40px;
+	border: none;
+	border-left: 1px solid #ccc;
+	background-color: #fff;
+}
+.container .nav .nav_center button i{
+	font-size: 25px;
+}
+/* 导航右侧列表样式 */
+.container .nav .nav_right ul{
+	display: flex;
+	justify-content: space-between;
+	line-height: 50px;
+}
+.container .nav .nav_right ul li{
+	margin-left: 20px;
+}
+.container .nav .nav_right ul li a{
+	color: #ffffff;
+}
+
+.container .nav .nav_right ul .cart{
+	width: 120px;
+	text-align: center;
+	background-color: rgba(0,0,0,0.3);	
+}
+.container .nav .nav_right .cart:hover{
+	background-color: #ccc;
+}
+.container .nav .nav_right ul .cart i{
+	color: #fff;
+	margin-right: 10px;
+	font-size: 18px;
+}
+
+/* 轮播图 */
+.banner{
+	width: 1226px;
+	height: 480px;
+	/* background-color: red; */
+	margin: 15px  auto 0;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+/* 轮播图左侧-列表 */
+.banner .banner_left{
+	width: 234px;
+	height: 480px;
+	background-color: rgba(0,0,0,0.3);
+	position: absolute;
+	top: 0;
+	left: 0;
+	/* 优先级-数值越大，优先级越高 */
+	z-index: 9999;
+}
+.banner .banner_left li {
+	color: #fff;
+	text-indent: 20px;
+	height: 32px;
+	line-height: 30px;
+	font-size: 19px;
+}
+.banner .banner_left li:hover{
+	background-color: #558ef6;
+}
+.banner .banner_left li:first-child{
+	background-color: #558ef6;
+	text-align: center;
+	text-indent: 0; /* 清除首行缩进 */
+}
+.banner .banner_right{
+	width: 1226px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+.banner .banner_right ul{
+	width: calc(1126px * 5);
+	height: 480px;
+	display: flex;
+	justify-content: space-between;
+	animation: banner 20s linear infinite;
+}
+.banner .banner_right ul li{
+	width: 1226px;
+	height: 480px;
+}
+.banner .banner_right ul li img{
+	width: 100%;
+	height: 100%;
+}
+/* 创建动画 */
+@keyframes banner{
+	0%{
+		margin-left: 0;
+	}
+	25%{
+		margin-left: -100%;
+	}
+	50%{
+		margin-left: -200%;
+	}
+	75%{
+		margin-left: -300%;
+	}
+	100%{
+		margin-left: -400%;
+	}
+}
+.contain{
+	width: 1226px;
+	height: 410px;
+	/* background-color: red; */
+	margin: 5px auto;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	margin-top: 20px;
+}
+
+.contain .contain_text h3{
+	width: 1226px;
+	font-size: 30px;
+	line-height: 25px;
+	text-align: center;	
+}
+.contain .contain_picture{
+	position: absolute;
+	top: 45px;
+	display: flex;
+	justify-content: space-between;
+	width: 1248px;
+}
+
+
+.contain .contain_picture  img{
+	height: 350px;
+	width: 300px;
+
+	border-radius: 20px;
+}
+.picture02,
+.picture03 {
+	padding: 0px 0px 2px 0px;
+}
+.contain .contain_picture p{
+	text-align: center;
+	font-family: "宋体" ;
+	font-weight: bold;
+	
+}
+.cur{
+	text-align: center;
+}
+/* 字体上内边距设为10px，字体往下移10px */
+.desc p {
+	padding-top: 23px;
+	font-size: 20px;
+}
+
+.item {
+	width: 300px;
+	height: 350px;
+	text-align: center;
+	margin-right: 20px;
+	float: left;
+	position: relative;
+	top: 0;
+	overflow: hidden;
+	transition: all .5s;
+	box-shadow: #5db9ff 0px 5px 5px;
+	border-radius: 16px;
+}
+
+.desc {
+	position: absolute;
+	bottom: -100px;
+	width: 100%;
+	height: 100px;
+	background-color: cornflowerblue;
+	transition: all .5s;
+	background-color: rgba(93, 185, 255, 0.8);
+	border-radius: 6px;
+	
+}
+
+.cur {
+	font-weight: bold;
+	font-size: 20px;
+	margin-top: -1px;
+
+}
+
+.item:hover {
+	top: -5px;
+	box-shadow: 0 0 15px #aaa;
+}
+
+.item:hover .desc {
+	bottom: 0;
+}
+.footer1{
+	width: 1226px;
+	height: 600px;
+	margin: 0 auto;
+}
+.footer1 .container_c1 {
+	width: 1226px;
+	height: 45px;
+	/* float: left; */
+	margin: 0 auto;
+	border-radius: 0 0 10px;
+}
+.footer1 .container_c1 h4{
+	font-size: 30px;
+	line-height: 30px;
+	text-align: center;	
+}
+.footer1 .container_c2{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	
+}
+.footer1 .container_c3{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 20px 0;
+}
+.footer1 .row{
+	width: 228px;
+	height: 250px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	overflow: hidden;
+	
+}
+.footer1 .naicha{
+	width: 228px;
+	height: 204px;
+}
+footer {
+	width: 880px;
+	margin: 0 auto;
+}
+footer>p {
+	font-family: 'STXingkai';
+	font-size: 35px;
+	color: #8ed8e6;
+	line-height: 20px;
+	padding: 20px;
+	text-align: center;
+}
+.services {
+	font-family: "microsoft yahei";
+	font-size: 15px;
+	color: #374136;
+	padding-bottom: 50px;
+	text-align: center;
+}
